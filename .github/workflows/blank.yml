@@ -1,25 +1,26 @@
-name: Build Web App
- 
-on: push
- 
+name: CI
+# This workflow is triggered on pushes to the repository.
+on: [push]
+
 jobs:
-  build:
- 
-    runs-on: windows-latest
- 
-    steps:
-    - uses: actions/checkout@v1
-      name: Checkout Code
-     
-    - name: Setup MSBuild Path
-      uses: warrenbuckley/Setup-MSBuild@v1
-       
-    - name: Setup NuGet
-      uses: NuGet/setup-nuget@v1.0.2
-     
-    - name: Restore NuGet Packages
-      run: nuget restore Ejercicios.sln
- 
-    - name: Build and Publish Web App
-      run: msbuild Ejercicios.sln
- 
+  build:
+    # Job name is Greeting
+    name: CI Job
+    # This job runs on Linux
+    runs-on: windows-latest
+    steps:
+      # This step uses GitHub's hello-world-javascript-action: https://github.com/actions/hello-world-javascript-action
+      - name: Checkout Code
+        uses: actions/checkout@v1
+      # This step prints an output (time) from the previous step's action.
+      - name: Setup MSBuild Path
+        run: warrenbuckley/Setup-MSBuild@v1
+      # This step prints an output (time) from the previous step's action.
+      - name: Setup NuGet
+        run: NuGet/setup-nuget@v1.0.2
+      # This step prints an output (time) from the previous step's action.
+      - name: Restore NuGet Packages
+        run: nuget restore Ejercicios.sln
+      # This step prints an output (time) from the previous step's action.
+      - name: Build and Publish Web App
+        run: msbuild Ejercicios.sln
