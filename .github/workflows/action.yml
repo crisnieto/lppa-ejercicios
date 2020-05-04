@@ -13,11 +13,13 @@ jobs:
 
     - name: Setup VSWhere.exe
       uses: warrenbuckley/Setup-VSWhere@v1
+      
+    - name: VSWhere MSBuild
+      run: vswhere -latest -requires Microsoft.Component.MSBuild -find MSBuild\**\Bin\MSBuild.exe
 
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v1
-      with:
-        vs-version: "[15.9]"
+
     - name: echo msbuild path
       run: echo "${{ steps.setup_msbuild.outputs.msbuildPath }}"
 
