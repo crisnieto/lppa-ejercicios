@@ -9,18 +9,25 @@ jobs:
     # This job runs on Linux
     runs-on: windows-latest
     steps:
-      # This step uses GitHub's hello-world-javascript-action: https://github.com/actions/hello-world-javascript-action
-      - name: Checkout Code
-        uses: actions/checkout@v1
-      # This step prints an output (time) from the previous step's action.
-      - name: Setup MSBuild Path
-        run: microsoft/setup-msbuild@v1.0.0
-      # This step prints an output (time) from the previous step's action.
-      - name: Setup NuGet
-        run: NuGet/setup-nuget@v1.0.2
-      # This step prints an output (time) from the previous step's action.
-      - name: Restore NuGet Packages
-        run: nuget restore Ejercicios.sln
-      # This step prints an output (time) from the previous step's action.
-      - name: Build and Publish Web App
-        run: msbuild Ejercicios.sln
+    - uses: actions/checkout@v2
+
+    - name: Setup MSBuild
+      id: setup_msbuild
+      uses: ./
+      with:
+        vs-version: "[15.9]"
+
+    - name: echo msbuild path
+      run: echo "${{ steps.setup_msbuild.outputs.msbuildPath }}"
+
+    - name: echo MSBuild
+      run: msbuild -version
+    # This step prints an output (time) from the previous step's action.
+    - name: Setup NuGet
+      run: NuGet/setup-nuget@v1.0.2
+    # This step prints an output (time) from the previous step's action.
+    - name: Restore NuGet Packages
+      run: nuget restore Ejercicios.sln
+    # This step prints an output (time) from the previous step's action.
+    - name: Build and Publish Web App
+      run: msbuild Ejercicios.sln
