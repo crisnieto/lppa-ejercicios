@@ -11,12 +11,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Setup VSWhere.exe
-      uses: warrenbuckley/Setup-VSWhere@v1
-      
-    - name: VSWhere MSBuild
-      run: vswhere -latest -requires Microsoft.Component.MSBuild -find MSBuild\**\Bin\MSBuild.exe
-
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v1
 
@@ -25,12 +19,6 @@ jobs:
 
     - name: echo MSBuild
       run: msbuild -version
-    # This step prints an output (time) from the previous step's action.
-    #- name: Setup NuGet
-    #  run: NuGet/setup-nuget@v1.0.2
-    # This step prints an output (time) from the previous step's action.
-    #- name: Restore NuGet Packages
-    #  run: nuget restore Ejercicios.sln
-    # This step prints an output (time) from the previous step's action.
+
     - name: Build and Publish Web App
       run: msbuild Ejercicios.sln
