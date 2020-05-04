@@ -12,11 +12,9 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Setup MSBuild
-      id: setup_msbuild
-      uses: ./
+      uses: microsoft/setup-msbuild@v1
       with:
         vs-version: "[15.9]"
-
     - name: echo msbuild path
       run: echo "${{ steps.setup_msbuild.outputs.msbuildPath }}"
 
