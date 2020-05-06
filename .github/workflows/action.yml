@@ -1,0 +1,24 @@
+name: CI
+# This workflow is triggered on pushes to the repository.
+on: [pull_request]
+
+jobs:
+  build:
+    # Job name is Greeting
+    name: CI Job
+    # This job runs on Windows
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1
+
+    - name: echo msbuild path
+      run: echo "${{ steps.setup_msbuild.outputs.msbuildPath }}"
+
+    - name: echo MSBuild
+      run: msbuild -version
+
+    - name: Build and Publish Web App
+      run: msbuild Ejercicios.sln
