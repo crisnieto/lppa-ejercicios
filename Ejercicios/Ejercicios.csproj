@@ -121,6 +121,7 @@
     <Content Include="Default.aspx" />
     <Content Include="Ejercicio1_Vuelta.aspx" />
     <Content Include="Ejercicio2.aspx" />
+    <Content Include="Ejercicio2_Vuelta.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -205,6 +206,13 @@
     </Compile>
     <Compile Include="Ejercicio2.aspx.designer.cs">
       <DependentUpon>Ejercicio2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicio2_Vuelta.aspx.cs">
+      <DependentUpon>Ejercicio2_Vuelta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ejercicio2_Vuelta.aspx.designer.cs">
+      <DependentUpon>Ejercicio2_Vuelta.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

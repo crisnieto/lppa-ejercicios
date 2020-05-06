@@ -8,6 +8,7 @@
 
         <p class="lead">Esta pagina web se encuentra destinada a la resolucion de ejercicios de la materia LPPA</p>
         <p><a href="./Ejercicio1" class="btn btn-primary btn-lg">Ejercicio 1 &raquo;</a></p>
+        <p><a href="./Ejercicio2" class="btn btn-primary btn-lg">Ejercicio 2 &raquo;</a></p>
     </div>
-
+        
 </asp:Content>
