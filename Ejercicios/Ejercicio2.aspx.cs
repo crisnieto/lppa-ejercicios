@@ -13,11 +13,5 @@ namespace Ejercicios
         {
 
         }
-
-        protected void btnEnviar_Click(object sender, EventArgs e)
-        {
-            //Ejecuta el script registrado en Ejercicio2.aspx
-            ScriptManager.RegisterStartupScript(this, GetType(), "validar", "validar();", true);
-        }
     }
 }
