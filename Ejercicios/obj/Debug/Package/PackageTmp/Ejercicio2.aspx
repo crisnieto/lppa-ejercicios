@@ -9,27 +9,26 @@
         function validar() {
             if (dato.opMdelPlata.checked == false && window.dato.opNiza.checked == false) {
                 alert("Debe seleccionar un destino")
-                return;
+                return false;
             }
             if (dato.opTres.checked == false && dato.opCuatro.checked == false) {
                 alert("Debe seleccionar una categoria")
-                return;
+                return false;
             }
             if (dato.txtCantidad.value == '') {
                 alert("Debe cargar la cantidad de personas")
-                return;
+                return false;
             }
             if (dato.txtDias.value == '') {
                 alert("Debe cargar la cantidad de dias")
-                return;
+                return false;
             }
-
             dato.submit();
         }
     </script>
 </head>
 <body>
-    <form id="dato" runat="server" action="Ejercicio2_Vuelta.aspx">
+    <form id="dato" runat="server" action="Ejercicio2_Vuelta.aspx" >
         <div>
             FORMULARIO DE COTIZACION
                         
@@ -64,7 +63,7 @@
                 &nbsp;<asp:TextBox ID="txtDias" runat="server"></asp:TextBox>
             </div>
             <br />
-            <asp:Button ID="btnEnviar" runat="server" OnClick="btnEnviar_Click" Text="Enviar" />
+            <asp:Button ID="btnEnviar" runat="server" onClientClick="return validar()" Text="Enviar"/>
         </div>
     </form>
 </body>
