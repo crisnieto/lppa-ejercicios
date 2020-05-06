@@ -26,7 +26,7 @@ namespace Ejercicios
             }
             catch (Exception ex)
             {
-                return("Ocurrio un error al procesar los datos enviados. Por favor intente nuevamente");
+                return("Ocurrio un error al procesar los datos enviados. Asegurese de haber ingresado los tipos de datos correctos.");
             }
         }
     }

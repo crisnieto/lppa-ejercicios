@@ -30,7 +30,7 @@ namespace UnitTestProject
             string result = ejercicio.Calculate("Nieto", "Texto");
 
             //Assert
-            Assert.AreEqual("Ocurrio un error al procesar los datos enviados. Por favor intente nuevamente", result);
+            Assert.AreEqual("Ocurrio un error al procesar los datos enviados. Asegurese de haber ingresado los tipos de datos correctos.", result);
         }
     }
 }

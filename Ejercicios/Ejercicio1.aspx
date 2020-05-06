@@ -7,14 +7,14 @@
     <title></title>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" action="Ejercicio1_Vuelta.aspx">
         <div>
             Apellido:
             <asp:TextBox ID="txtApellido" runat="server"></asp:TextBox>
             Edad:
             <asp:TextBox ID="txtEdad" runat="server"></asp:TextBox>
         </div>
-        <asp:Button ID="btnEnviar" runat="server" Text="Enviar" PostBackUrl="Ejercicio1_Vuelta.aspx"/>
+        <asp:Button ID="btnEnviar" runat="server" Text="Enviar"/>
     </form>
 </body>
 </html>

@@ -29,39 +29,42 @@
     </script>
 </head>
 <body>
-    <form id="dato" runat="server">
+    <form id="dato" runat="server" action="Ejercicio2_Vuelta.aspx">
         <div>
             FORMULARIO DE COTIZACION
                         
             <br />
             <br />
-            DONDE SE VA DE VACACIONES?
-            <br />
+            <div>
+                DONDE SE VA DE VACACIONES?
+                <br />
 
-            <asp:RadioButton ID="opMdelPlata" runat="server" GroupName="group1" Text="MAR DEL PLATA" />
+                <asp:RadioButton ID="opMdelPlata" runat="server" GroupName="Destino" Text="MAR DEL PLATA" />
+                <br />
+                <asp:RadioButton ID="opNiza" runat="server" GroupName="Destino" Text="NIZA" />
+            </div>    
             <br />
-            <asp:RadioButton ID="opNiza" runat="server" GroupName="group1" Text="NIZA" />
-
+            <div>
+                CUAL ES LA CATEGORIA?
+                <br />
+                <asp:RadioButton ID="opTres" runat="server" GroupName="Estrella" Text="TRES ESTRELLAS" />
+                <br />
+                <asp:RadioButton ID="opCuatro" runat="server" GroupName="Estrella" Text="CUATRO ESTRELLAS" />
+            </div>
             <br />
-            CUAL ES LA CATEGORIA?
+            <div>
+                CANTIDAD DE PERSONAS:
+                <br />
+                &nbsp;<asp:TextBox ID="txtCantidad" runat="server"></asp:TextBox>
+            </div>
             <br />
-            <asp:RadioButton ID="opTres" runat="server" GroupName="group2" Text="TRES ESTRELLAS" />
-            <br />
-            <asp:RadioButton ID="opCuatro" runat="server" GroupName="group2" Text="CUATRO ESTRELLAS" />
-            <br />
-            <br />
-            CANTIDAD DE PERSONAS:
-            <br />
-            &nbsp;<asp:TextBox ID="txtCantidad" runat="server"></asp:TextBox>
-            <br />
-            <br />
-            CANTIDAD DE DIAS:
-            <br />
-            &nbsp;<asp:TextBox ID="txtDias" runat="server"></asp:TextBox>
+            <div>
+                CANTIDAD DE DIAS:
+                <br />
+                &nbsp;<asp:TextBox ID="txtDias" runat="server"></asp:TextBox>
+            </div>
             <br />
             <asp:Button ID="btnEnviar" runat="server" OnClick="btnEnviar_Click" Text="Enviar" />
-            <br />
-            
         </div>
     </form>
 </body>
