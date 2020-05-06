@@ -14,6 +14,9 @@ namespace Ejercicios
             Response.Write(Calculate(Request.Form.Get("txtApellido"), Request.Form.Get("txtEdad")));
         }
 
+        /*
+         * Se separa en un metodo aparte del Load para poder testear unitariamente.
+         */ 
         public string Calculate(string apellido, string edad)
         {
             try
