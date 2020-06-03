@@ -124,7 +124,9 @@
     <Content Include="Ejercicio2_Vuelta.aspx" />
     <Content Include="Ejercicio3.aspx" />
     <Content Include="Ejercicio3_calcprestamo.aspx" />
+    <Content Include="Ejercicio4.aspx" />
     <Content Include="favicon.ico" />
+    <Content Include="ffff.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -229,6 +231,20 @@
     </Compile>
     <Compile Include="Ejercicio3_calcprestamo.aspx.designer.cs">
       <DependentUpon>Ejercicio3_calcprestamo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ejercicio4.aspx.cs">
+      <DependentUpon>Ejercicio4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ejercicio4.aspx.designer.cs">
+      <DependentUpon>Ejercicio4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ffff.aspx.cs">
+      <DependentUpon>ffff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ffff.aspx.designer.cs">
+      <DependentUpon>ffff.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
